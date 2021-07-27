@@ -61,6 +61,12 @@ argument of splitFastq
 - by: Defines the number of sequences in each chunk(default : 1)
 - file: Using a string to create split files with a specific name(split index number is autimactically added)
 
+### set3 (file pairs)
+
+`./fromFilePairs('PATH')` - create a channel emitting the file pairs matching a glob pattern. The pttern must match a common prefix in the paired file names. The matcing files are emitted as tuples in which the first element is the grouping key of the matching pair and the second element is the list of files (sorted in lexicographical order)
+
+`.set {name_ch}`
+
 ## process
 ### format
 
@@ -78,6 +84,19 @@ process "process name"{
 
 #### format
 
-input : file "name_of_parameter" from "name of channel"
+1. input : 
 
--> use $name_of_parameter in script
+  file "name_parameter" from "name_ch"
+  
+  -> you can use $name_parameter
+
+2. input :
+
+  set sampleId, file(reads) from "name_ch"
+  
+  -> you can use $sampleId, $reads
+
+
+
+
+
