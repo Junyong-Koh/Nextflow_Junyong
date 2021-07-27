@@ -10,19 +10,19 @@
 
 ### set1(file path)
 
-#### basic
+#### 1. basic
 `.fromPath('PATH')`
 
 `.set{name_ch}` - set name of channel
 
-#### connection a source channel to two or more target channels
+#### 2. connection a source channel to two or more target channels
 `.fromPath('PATH')` - create a channel emitting one or more file paths by using the `fromPath` method and specifying a path string as an argument.
 
 `.into{name of the copies of the source channel1;name of the copies of the source channel2,...}` - create two (or more) copies of the source channel. Then, use the new channels as input for the processes.
 
 ### set2 (file chunk for spliting)
 
-#### for .txt file
+#### 1. for .txt file
 
 `.fromPath('filename.txt')`
 
@@ -35,7 +35,7 @@ argument of splitText
 - by: Defines the number of lines in each chunk(default : 1)
 - file: Using a string to create split files with a specific name(split index number is autimactically added)
 
-#### for .fa FASTA file
+#### 2. for .fa FASTA file
 
 `.fromPath('filename.fa')`
 
@@ -48,7 +48,7 @@ argument of splitFasta
 - by: Defines the number of sequences in each chunk(default : 1)
 - file: Using a string to create split files with a specific name(split index number is autimactically added)
 
-#### for .fastaq FASTQ file
+#### 3. for .fastaq FASTQ file
 
 `.fromPath('filename.fastq')`
 
