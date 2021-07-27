@@ -63,7 +63,7 @@ argument of splitFastq
 
 ### set3 (file pairs)
 
-`./fromFilePairs('PATH')` - create a channel emitting the file pairs matching a glob pattern. The pttern must match a common prefix in the paired file names. The matcing files are emitted as tuples in which the first element is the grouping key of the matching pair and the second element is the list of files (sorted in lexicographical order)
+`.fromFilePairs('PATH')` - create a channel emitting the file pairs matching a glob pattern. The pttern must match a common prefix in the paired file names. The matcing files are emitted as tuples in which the first element is the grouping key of the matching pair and the second element is the list of files (sorted in lexicographical order)
 
 `.set {name_ch}`
 
@@ -84,13 +84,13 @@ process "process name"{
 
 #### format
 
-1. input : 
+1 input : 
 
   file "name_parameter" from "name_ch"
   
   -> you can use $name_parameter
 
-2. input :
+2 input :
 
   set sampleId, file(reads) from "name_ch"
   
