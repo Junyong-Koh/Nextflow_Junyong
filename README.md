@@ -86,15 +86,15 @@ process "process name"{
 
 1 input : 
 
-  file "name_parameter" from "name_ch"
+file "name_parameter" from "name_ch"
   
-  -> you can use $name_parameter
+-> you can use $name_parameter
 
 2 input :
 
-  set sampleId, file(reads) from "name_ch"
+set sampleId, file(reads) from "name_ch"
   
-  -> you can use $sampleId, $reads
+-> you can use $sampleId, $reads
 
 
 
