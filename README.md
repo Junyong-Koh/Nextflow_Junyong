@@ -64,6 +64,7 @@ argument of splitFastq
 ## process
 ### format
 
+```
 process "process name"{
   your setting
   script:
@@ -71,11 +72,12 @@ process "process name"{
   your command
   """
 }
+```
 
-- input
+### setting
 
-format
+#### format
 
 input : file "name_of_parameter" from "name of channel"
 
-then use $name_of_parameter in script
+-> use $name_of_parameter in script
